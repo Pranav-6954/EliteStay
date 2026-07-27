@@ -1,0 +1,27 @@
+<br>
+<% const succ = (typeof success !== "undefined" && success) ? success : (typeof locals !== "undefined" && locals.success ? locals.success : null); %>
+<% const err = (typeof error !== "undefined" && error) ? error : (typeof locals !== "undefined" && locals.error ? locals.error : null); %>
+
+<% if(succ && succ.length) { %>
+    <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+        <%= succ %>
+        <button 
+        type="button" 
+        class="btn-close" 
+        data-bs-dismiss="alert" 
+        aria-label="Close">
+        </button>
+    </div>
+<% } %>
+
+<% if(err && err.length) { %>
+    <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+        <%= err %>
+        <button 
+        type="button" 
+        class="btn-close" 
+        data-bs-dismiss="alert" 
+        aria-label="Close">
+        </button>
+    </div>
+<% } %>

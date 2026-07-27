@@ -1,0 +1,225 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+/* Navbar */
+.navbar{
+    background-color: #fff !important;
+    min-height: 5rem;
+}
+
+.fa-asymmetrik{
+    color: blue;
+    font-size: 2rem;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link{
+    color:#222 !important;
+    font-size:1.05rem;
+    margin-left:10px;
+}
+
+.navbar-nav .nav-link:hover{
+    color:#ff385c !important;
+}
+
+/* Mobile Menu */
+@media (max-width:991px){
+
+    .navbar-collapse{
+        margin-top:15px;
+        padding:15px;
+        background:#fff;
+        border-radius:12px;
+        box-shadow:0 8px 20px rgba(0,0,0,.1);
+    }
+
+    .navbar-nav{
+        gap:8px;
+    }
+
+    .navbar-nav.ms-auto{
+        margin-top:15px;
+        border-top:1px solid #eee;
+        padding-top:15px;
+    }
+
+    .nav-link{
+        padding:10px 0;
+    }
+}
+
+
+.footer{
+    min-height: 8rem;
+}
+
+.footer i{
+    font-size: 1.2rem;
+}
+
+.footer a:hover{
+    color: #ff385c !important;
+}
+
+
+/* Cards */
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+    font-weight: 400 !important;
+}
+
+.listing-link{
+    text-decoration: none;
+    color: black;
+}
+
+.listing-card{
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.listing-card:hover{
+    transform: scale(1.02);
+}
+
+.listing-img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.card-body{
+    padding: 1rem 0.2rem;
+}
+
+.card-text{
+    font-size: 1.1rem;
+}
+
+/* New Page */
+.add-btn{
+   background-color: #ff385c !important;
+   border: none !important;
+}
+
+/* Edit Page */
+.edit-btn{
+    background-color: #ff385c !important;
+    border: none !important;
+}
+
+/* Show Image */
+.show-img{
+    height: 30vh;
+}
+
+.btns{
+    display: flex;
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Show Page */
+
+.show-card{
+    width:100%;
+    border:none !important;
+    border-radius:1rem;
+}
+
+.show-img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:1rem;
+}
+
+.btns{
+    display:flex;
+    gap:15px;
+}
+
+.btns a,
+.btns form{
+    flex:1;
+}
+
+.btns button{
+    width:100%;
+}
+
+@media (max-width:992px){
+
+    .show-img{
+        height:300px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .show-img{
+        height:220px;
+    }
+
+    .btns{
+        flex-direction:column;
+    }
+
+    .btns a,
+    .btns form{
+        width:100%;
+    }
+
+}
+
+/* Maps */
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 16px;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    overflow: hidden;
+}
+
+@media (max-width: 576px) {
+    #map {
+        height: 300px;
+    }
+}
