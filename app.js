@@ -117,13 +117,15 @@ app.all("/*splat", (req, res, next) => {
 // Error Handler
 // ====================
 app.use((err, req, res, next) => {
-  let { statusCode = 500, message = "Something Went Wrong!" } = err;
+  console.error("APP ERROR HANDLER CAPTURED ERROR:", err);
+  let { statusCode = 500, message } = err;
+  const displayMessage = message || err.message || "Something Went Wrong!";
 
   if (res.headersSent) {
     return next(err);
   }
 
-  res.status(statusCode).render("error.ejs", { message });
+  res.status(statusCode).render("error.ejs", { message: displayMessage });
 });
 
 // ====================
