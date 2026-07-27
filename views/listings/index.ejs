@@ -7,17 +7,21 @@
         gap: 1.5rem;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
+        width: 100%;
     }
 
     #filters {
-        display: flex;
+        display: flex !important;
+        flex-wrap: nowrap !important;
         align-items: center;
         gap: 2rem;
-        overflow-x: auto;
+        overflow-x: auto !important;
+        white-space: nowrap;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
         padding-bottom: 0.5rem;
         margin-bottom: -0.5rem;
+        width: 100%;
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
